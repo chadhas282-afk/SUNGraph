@@ -96,3 +96,17 @@
                 <span id="label-game"
                     class="text-xs font-semibold label-inactive transition-colors whitespace-nowrap">Game</span>
             </div>
+
+            <div id="score-container" class="hidden score-badge shrink-0">
+                <span class="text-xs font-bold text-amber-500/70 mr-1">SCORE</span>
+                <span id="score-value"
+                    class="text-lg font-black text-amber-300 font-mono transition-transform duration-150">0</span>
+            </div>
+        </header>
+
+        <div id="chat-history"
+            class="flex-1 overflow-y-auto px-3 md:px-5 py-4 md:py-6 space-y-4 flex flex-col scroll-smooth">
+        </div>
+
+        <div class="input-area p-3 md:p-4 shrink-0">
+            <form id="chat-form" class="flex items-center gap-3">
