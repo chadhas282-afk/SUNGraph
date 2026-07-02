@@ -25,7 +25,7 @@
                 }
             }
         }
-        </script>
+    </script>
     <link rel="stylesheet" href="style.css?v=8">
     <script src="https://www.desmos.com/api/v1.9/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </head>
@@ -35,7 +35,7 @@
     <div id="right-panel" class="chat-panel w-full md:w-[40%] h-1/2 md:h-full flex flex-col relative z-10">
 
         <header
-        class="header-solar h-[60px] md:h-[70px] flex items-center justify-between px-3 md:px-5 shrink-0 gap-2 md:gap-4">
+            class="header-solar h-[60px] md:h-[70px] flex items-center justify-between px-3 md:px-5 shrink-0 gap-2 md:gap-4">
 
             <div class="flex items-center gap-2 md:gap-3">
                 <svg class="w-8 h-8 md:w-10 md:h-10 drop-shadow-[0_0_18px_rgba(245,158,11,0.7)] shrink-0"
@@ -50,7 +50,7 @@
                         <linearGradient id="ringGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
                             <stop offset="0%" stop-color="#fbbf24" />
                             <stop offset="100%" stop-color="#ea580c" />
-                            </linearGradient>
+                        </linearGradient>
                         <filter id="glow">
                             <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
                             <feMerge>
@@ -59,3 +59,12 @@
                             </feMerge>
                         </filter>
                     </defs>
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(245,158,11,0.12)" stroke-width="8" />
+                    <ellipse cx="50" cy="50" rx="44" ry="16" transform="rotate(-25 50 50)" stroke="url(#ringGrad)"
+                        stroke-width="1.5" fill="none" opacity="0.7" stroke-dasharray="10 5" />
+                    <ellipse cx="50" cy="50" rx="44" ry="16" transform="rotate(25 50 50)" stroke="url(#ringGrad)"
+                        stroke-width="1.5" fill="none" opacity="0.4" />
+                    <circle cx="50" cy="50" r="20" fill="url(#sunGlow)" filter="url(#glow)" />
+                    <g stroke="#fde047" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)">
+                        <line x1="50" y1="10" x2="50" y2="22" />
+                        <line x1="50" y1="78" x2="50" y2="90" />
