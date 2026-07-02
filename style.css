@@ -36,3 +36,23 @@ body {
     from { transform: rotate(0deg); }
     to   { transform: rotate(-360deg); }
 }
+
+.ambient-bg {
+    background: radial-gradient(ellipse at 80% 20%, rgba(234,88,12,0.18) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(245,158,11,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse at 50% 50%, rgba(146,64,14,0.08) 0%, transparent 70%),
+                linear-gradient(-45deg, #0a0500, #140800, #0e0600, #06030a);
+    background-size: 400% 400%;
+    animation: solarPulse 18s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.ambient-bg::before,
+.ambient-bg::after {
+    content: '';
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 50%;
+}
