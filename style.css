@@ -7,3 +7,10 @@
     --sun-deep:     #ea580c;
     --corona:       #92400e;
     --space-deep:   #0a0500;
+     --space-mid:    #120a00;
+    --space-panel:  #1a0e00;
+    --space-border: rgba(245, 158, 11, 0.15);
+    --glow-sm:      0 0 12px rgba(245, 158, 11, 0.35);
+    --glow-md:      0 0 28px rgba(245, 158, 11, 0.25);
+    --glow-lg:      0 0 60px rgba(245, 158, 11, 0.15);
+}
