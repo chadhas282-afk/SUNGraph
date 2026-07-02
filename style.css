@@ -14,3 +14,15 @@
     --glow-md:      0 0 28px rgba(245, 158, 11, 0.25);
     --glow-lg:      0 0 60px rgba(245, 158, 11, 0.15);
 }
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+@keyframes solarPulse {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
