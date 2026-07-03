@@ -223,3 +223,13 @@ body {
     transition: all 0.2s ease;
     flex-shrink: 0;
 }
+
+.send-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+}
+
+.send-btn:active { transform: scale(0.95); }
+
+input:checked ~ .dot { transform: translateX(100%); }
+#toggle-bg { transition: background-color 0.3s; }
