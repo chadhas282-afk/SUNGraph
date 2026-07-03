@@ -8,3 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreValue = document.getElementById('score-value');
     const labelSimple = document.getElementById('label-simple');
     const labelGame = document.getElementById('label-game');
+
+    const calcElt = document.getElementById('calculator-container');
+    const calculator = Desmos.GraphingCalculator(calcElt, {
+        keypad: false,
+        expressions: false,
+        settingsMenu: false,
+        zoomButtons: true,
+        border: false,
+        invertedColors: true
+    });
