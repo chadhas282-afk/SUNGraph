@@ -41,3 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { latex: 'r=\\cos(4\\theta)', name: 'Rose' },
         { latex: 'x^{2/3}+y^{2/3}=1', name: 'Asteroid' },
         { latex: 'y=1/x', name: 'Reciprocal Curve' },
+        { latex: 'y=\\sqrt{x}', name: 'Square Root Curve' },
+        { latex: 'y=\\sqrt[3]{x}', name: 'Cube Root Curve' },
+        { latex: 'y=1/(1+e^{-x})', name: 'Sigmoid Curve' },
+        { latex: 'y=\\lfloor x \\rfloor', name: 'Step Function' }
+    ];
