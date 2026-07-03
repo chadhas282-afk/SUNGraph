@@ -54,3 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/\\?cos/g, '\\cos')
             .replace(/\\?tan/g, '\\tan')
             .replace(/\\?log/g, '\\log')
+            .replace(/\\?ln/g, '\\ln')
+            .replace(/\|([a-zA-Z0-9_+ -]+)\|/g, '\\left|$1\\right|');
+            
+        calculator.setExpression({ id: 'current-graph', latex: formattedLatex, color: Desmos.Colors.BLUE });
+    }
