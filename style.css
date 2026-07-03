@@ -251,3 +251,18 @@ input:checked ~ .dot { transform: translateX(100%); }
     background-image: linear-gradient(90deg, var(--sun-bright), var(--sun-mid));
     filter: drop-shadow(0 0 6px rgba(245,158,11,0.4));
 }
+
+.typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.typing-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--sun-mid);
+    border-radius: 50%;
+    animation: typing 1.4s infinite ease-in-out both;
+    box-shadow: 0 0 6px rgba(245,158,11,0.6);
+}
