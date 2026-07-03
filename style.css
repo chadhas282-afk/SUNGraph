@@ -195,3 +195,16 @@ body {
     transition: all 0.25s ease;
     outline: none;
 }
+
+.chat-input-field::placeholder { color: rgba(245, 158, 11, 0.3); }
+
+.chat-input-field:focus {
+    border-color: rgba(245, 158, 11, 0.6);
+    box-shadow: var(--glow-sm), 0 0 0 3px rgba(245, 158, 11, 0.08);
+    background: rgba(35, 17, 0, 0.9);
+}
+
+.chat-input-field:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
