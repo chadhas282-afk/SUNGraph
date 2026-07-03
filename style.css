@@ -233,3 +233,21 @@ body {
 
 input:checked ~ .dot { transform: translateX(100%); }
 #toggle-bg { transition: background-color 0.3s; }
+
+.graph-badge {
+    background: linear-gradient(135deg, rgba(20,8,0,0.85), rgba(10,4,0,0.95));
+    border: 1px solid rgba(245,158,11,0.3);
+    box-shadow: var(--glow-sm);
+    backdrop-filter: blur(12px);
+    border-radius: 50px;
+    padding: 4px 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, var(--sun-bright), var(--sun-mid));
+    filter: drop-shadow(0 0 6px rgba(245,158,11,0.4));
+}
