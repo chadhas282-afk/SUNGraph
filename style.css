@@ -208,3 +208,18 @@ body {
     opacity: 0.4;
     cursor: not-allowed;
 }
+
+.send-btn {
+    background: linear-gradient(135deg, var(--sun-mid) 0%, var(--sun-deep) 100%);
+    border: none;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--glow-md);
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
