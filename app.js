@@ -18,3 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
         border: false,
         invertedColors: true
     });
+
+    let isGameMode = false;
+    let score = 0;
+
+    const shapes = [
+        { latex: 'x^2+y^2=25', name: 'Circle' },
+        { latex: 'y=\\left|x\\right|', name: 'Modulus' },
+        { latex: 'y=x^3', name: 'Cubic Curve' },
+        { latex: 'y=x', name: 'Line' },
+        { latex: 'y=x^2', name: 'Parabola' },
+        { latex: 'y=\\sin(x)', name: 'Wave' },
+        { latex: 'x^2/16+y^2/9=1', name: 'Ellipse' },
