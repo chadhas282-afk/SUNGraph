@@ -59,3 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
             
         calculator.setExpression({ id: 'current-graph', latex: formattedLatex, color: Desmos.Colors.BLUE });
     }
+
+    function clearGraph() {
+        calculator.removeExpression({ id: 'current-graph' });
+    }
+
+    function appendMessage(sender, text) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `chat-message max-w-[82%] rounded-2xl px-5 py-3 text-sm leading-relaxed ${
+            sender === 'user'
+                ? 'self-end glass-user rounded-br-sm'
+                : 'self-start glass-bot rounded-bl-sm'
+        }`;
+        let formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        msgDiv.innerHTML = formattedText;
+        chatHistory.appendChild(msgDiv);
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
