@@ -279,3 +279,15 @@ input:checked ~ .dot { transform: translateX(100%); }
     0%   { opacity: 1; transform: translateY(0) scale(1); }
     100% { opacity: 0; transform: translateY(-50px) scale(1.6); }
 }
+
+.floating-score {
+    animation: floatUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    color: var(--sun-bright);
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+}
+
+.dcg-calculator-api-container { border: none !important; }
+#calculator-container {
+    border-left: 1px solid rgba(245,158,11,0.12) !important;
+}
