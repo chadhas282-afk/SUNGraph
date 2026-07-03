@@ -172,3 +172,15 @@ body {
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
+
+.mcq-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(60, 28, 0, 0.9) 0%, rgba(40, 16, 0, 0.95) 100%);
+    border-color: rgba(245, 158, 11, 0.6);
+    box-shadow: var(--glow-sm), 0 4px 12px rgba(0,0,0,0.5);
+    transform: translateY(-1px);
+}
+
+.input-area {
+    background: linear-gradient(180deg, rgba(10, 5, 0, 0.95) 0%, rgba(6, 3, 0, 0.98) 100%);
+    border-top: 1px solid var(--space-border);
+}
