@@ -7,7 +7,7 @@
     --sun-deep:     #ea580c;
     --corona:       #92400e;
     --space-deep:   #0a0500;
-     --space-mid:    #120a00;
+    --space-mid:    #120a00;
     --space-panel:  #1a0e00;
     --space-border: rgba(245, 158, 11, 0.15);
     --glow-sm:      0 0 12px rgba(245, 158, 11, 0.35);
@@ -290,4 +290,18 @@ input:checked ~ .dot { transform: translateX(100%); }
 .dcg-calculator-api-container { border: none !important; }
 #calculator-container {
     border-left: 1px solid rgba(245,158,11,0.12) !important;
+}
+
+.dcg-watermark,
+.dcg-powered-by,
+.dcg-logo,
+.dcg-branding,
+.dcg-brand,
+.dcg-graphpaper-branding,
+.dcg-icon-desmos,
+.dcg-container .dcg-watermark,
+.dcg-container .dcg-powered-by {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
