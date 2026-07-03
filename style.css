@@ -95,3 +95,16 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
+
+.app-name {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, var(--sun-bright), var(--sun-mid), var(--sun-core));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.05em;
+    text-shadow: none;
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
+}
