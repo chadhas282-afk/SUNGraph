@@ -85,3 +85,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(245, 158, 11, 0.5);
 }
+
+.header-solar {
+    background: linear-gradient(90deg,
+        rgba(20, 8, 0, 0.95) 0%,
+        rgba(30, 14, 0, 0.90) 100%);
+    border-bottom: 1px solid var(--space-border);
+    box-shadow: var(--glow-sm), 0 2px 0 rgba(245,158,11,0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
