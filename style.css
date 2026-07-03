@@ -108,3 +108,14 @@ body {
     text-shadow: none;
     filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
 }
+
+.label-active { color: var(--sun-bright); }
+.label-inactive { color: rgba(245, 158, 11, 0.35); }
+
+.score-badge {
+    background: linear-gradient(135deg, rgba(20, 8, 0, 0.9) 0%, rgba(40, 16, 0, 0.8) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    box-shadow: var(--glow-sm), inset 0 1px 1px rgba(245, 158, 11, 0.08);
+    border-radius: 12px;
+    padding: 8px 18px;
+}
