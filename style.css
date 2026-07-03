@@ -184,3 +184,14 @@ body {
     background: linear-gradient(180deg, rgba(10, 5, 0, 0.95) 0%, rgba(6, 3, 0, 0.98) 100%);
     border-top: 1px solid var(--space-border);
 }
+
+.chat-input-field {
+    background: rgba(25, 12, 0, 0.8);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    color: #fde68a;
+    border-radius: 50px;
+    padding: 12px 22px;
+    font-size: 0.875rem;
+    transition: all 0.25s ease;
+    outline: none;
+}
