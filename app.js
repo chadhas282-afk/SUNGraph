@@ -46,3 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { latex: 'y=1/(1+e^{-x})', name: 'Sigmoid Curve' },
         { latex: 'y=\\lfloor x \\rfloor', name: 'Step Function' }
     ];
+
+    function plotGraph(latexString) {
+
+        let formattedLatex = latexString
+            .replace(/\\?sin/g, '\\sin')
+            .replace(/\\?cos/g, '\\cos')
+            .replace(/\\?tan/g, '\\tan')
+            .replace(/\\?log/g, '\\log')
