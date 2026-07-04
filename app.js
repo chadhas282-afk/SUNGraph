@@ -188,3 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 let options = [correctShape.name, ...wrongShapes.map(s => s.name)];
                 appendMCQ(shuffle(options), correctShape, 'name');
             } else {
+                plotGraph(correctShape.latex);
+                appendMessage('bot', `What is the equation for the graph shown on the right?`);
+                let options = [correctShape.latex, ...wrongShapes.map(s => s.latex)];
+                appendMCQ(shuffle(options), correctShape, 'latex');
+            }
+        });
+    }
