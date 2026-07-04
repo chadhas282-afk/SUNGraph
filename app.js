@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const calcElt = document.getElementById('calculator-container');
     const calculator = Desmos.GraphingCalculator(calcElt, {
         keypad: false,
-        expressions: false,
+        expressions: true,
         settingsMenu: false,
         zoomButtons: true,
         border: false,
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isGameMode = false;
     let score = 0;
+    let addedIds = [];
 
     const shapes = [
         { latex: 'x^2+y^2=25', name: 'Circle' },
@@ -56,11 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/\\?log/g, '\\log')
             .replace(/\\?ln/g, '\\ln');
             
-        calculator.setExpression({ id: 'current-graph', latex: formattedLatex, color: Desmos.Colors.BLUE });
+        let id = isGameMode ? 'current-graph' : 'expr-' + Date.now();
+        if (!isGameMode) {
+            addedIds.push(id);
+        }
+            
+        calculator.setExpression({ id: id, latex: formattedLatex, color: Desmos.Colors.BLUE });
     }
 
     function clearGraph() {
         calculator.removeExpression({ id: 'current-graph' });
+        addedIds.forEach(id => calculator.removeExpression({ id: id }));
+        addedIds = [];
     }
 
     function appendMessage(sender, text) {
@@ -225,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             score = 0;
             setScore(0);
             chatHistory.innerHTML = '';
+            calculator.updateSettings({ expressions: false });
             appendMessage('bot', '☀️ **Game Mode Activated!** Get ready for Multiple Choice Questions.');
             setTimeout(startGameRound, 1000);
         } else {
@@ -236,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chatInput.disabled = false;
             chatInput.placeholder = 'Type an equation like y = sin(x)...';
             chatHistory.innerHTML = '';
+            calculator.updateSettings({ expressions: true });
             clearGraph();
             appendMessage('bot', '📊 **Simple Mode Activated!** Type an equation like y = sin(x) and I will plot it.');
         }
