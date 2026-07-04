@@ -126,3 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     b.style.cursor = 'not-allowed';
                     b.style.opacity = '0.45';
                 });
+                const isCorrect = (type === 'name') ? (opt === currentShape.name) : (opt === currentShape.latex);
+                if (isCorrect) {
+                    btn.style.background = 'linear-gradient(135deg,rgba(5,78,22,0.9),rgba(6,95,70,0.9))';
+                    btn.style.borderColor = 'rgba(34,197,94,0.7)';
+                    btn.style.color = '#86efac';
+                    btn.style.opacity = '1';
+                    setScore(score + 10);
+                } else {
