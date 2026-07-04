@@ -106,4 +106,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (newScore > score) spawnFloatingScore();
         score = newScore;
         scoreValue.innerText = score;
-        
+        scoreValue.classList.add('scale-150', 'text-white');
+        setTimeout(() => {
+            scoreValue.classList.remove('scale-150', 'text-white');
+        }, 200);
+    }
+
+    function appendMCQ(options, currentShape, type) {
+        const mcqContainer = document.createElement('div');
+        mcqContainer.className = 'chat-message self-start max-w-[92%] grid grid-cols-2 gap-2 w-full';
+        options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'mcq-btn';
+            btn.innerText = opt;
