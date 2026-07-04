@@ -140,3 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.opacity = '1';
                     const correctStr = (type === 'name') ? currentShape.name : currentShape.latex;
                     allBtns.forEach(b => {
+                        if (b.innerText === correctStr) {
+                            b.style.background = 'linear-gradient(135deg,rgba(5,78,22,0.9),rgba(6,95,70,0.9))';
+                            b.style.borderColor = 'rgba(34,197,94,0.7)';
+                            b.style.color = '#86efac';
+                            b.style.opacity = '1';
+                        }
+                    });
+                }
