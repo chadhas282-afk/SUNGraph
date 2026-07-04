@@ -85,3 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
         chatHistory.appendChild(typingDiv);
         chatHistory.scrollTop = chatHistory.scrollHeight;
         setTimeout(() => {
+            const el = document.getElementById('typing-indicator');
+            if (el) el.remove();
+            callback();
+        }, 800 + Math.random() * 500);
+    }
