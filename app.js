@@ -148,3 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                 }
+                showTypingIndicator(() => {
+                    plotGraph(currentShape.latex);
+                    if (isCorrect) {
+                        appendMessage('bot', '🎉 **Correct!** It is **' + currentShape.name + '**.');
+                    } else {
+                        appendMessage('bot', '❌ **Incorrect!** The answer was **' + currentShape.name + '**.');
+                    }
+                    setTimeout(startGameRound, 2500);
+                });
+            });
