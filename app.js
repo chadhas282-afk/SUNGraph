@@ -195,3 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    function handleUserInput(text) {
+        if (!text.trim() || isGameMode) return;
+
+        appendMessage('user', text);
+        chatInput.value = '';
+
+        showTypingIndicator(() => {
