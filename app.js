@@ -97,3 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         floater.innerText = '+10';
         const rect = scoreContainer.getBoundingClientRect();
         floater.style.left = (rect.left + rect.width / 2 - 14) + 'px';
+        floater.style.top = (rect.top) + 'px';
+        document.body.appendChild(floater);
+        setTimeout(() => floater.remove(), 1000);
+    }
+
+    function setScore(newScore) {
+        if (newScore > score) spawnFloatingScore();
+        score = newScore;
+        scoreValue.innerText = score;
+        
