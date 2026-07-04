@@ -203,3 +203,12 @@ document.addEventListener('DOMContentLoaded', () => {
         chatInput.value = '';
 
         showTypingIndicator(() => {
+            plotGraph(text);
+            appendMessage('bot', `Graphing equation: **${text}**`);
+        });
+    }
+
+    chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        handleUserInput(chatInput.value);
+    });
