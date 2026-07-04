@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const shapes = [
         { latex: 'x^2+y^2=25', name: 'Circle' },
-        { latex: 'y=\\left|x\\right|', name: 'Modulus' },
+        { latex: 'y=|x|', name: 'Modulus' },
         { latex: 'y=x^3', name: 'Cubic Curve' },
         { latex: 'y=x', name: 'Line' },
         { latex: 'y=x^2', name: 'Parabola' },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { latex: 'y=e^x', name: 'Exponential Curve' },
         { latex: 'y=\\ln(x)', name: 'Logarithmic Curve' },
         { latex: 'y=\\tan(x)', name: 'Tangent Wave' },
-        { latex: 'y=\\left|\\left|x\\right|-2\\right|', name: 'W-Shape' },
+        { latex: 'y=||x|-2|', name: 'W-Shape' },
         { latex: '(x^2+y^2-1)^3-x^2y^3=0', name: 'Heart' },
         { latex: 'r=\\theta', name: 'Spiral' },
         { latex: 'r=1-\\sin(\\theta)', name: 'Cardioid' },
@@ -54,8 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/\\?cos/g, '\\cos')
             .replace(/\\?tan/g, '\\tan')
             .replace(/\\?log/g, '\\log')
-            .replace(/\\?ln/g, '\\ln')
-            .replace(/\|([a-zA-Z0-9_+ -]+)\|/g, '\\left|$1\\right|');
+            .replace(/\\?ln/g, '\\ln');
             
         calculator.setExpression({ id: 'current-graph', latex: formattedLatex, color: Desmos.Colors.BLUE });
     }
