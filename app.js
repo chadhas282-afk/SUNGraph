@@ -221,3 +221,11 @@ document.addEventListener('DOMContentLoaded', () => {
             labelGame.classList.remove('label-inactive');
             labelGame.classList.add('label-active');
             scoreContainer.classList.remove('hidden');
+            chatInput.disabled = true;
+            chatInput.placeholder = 'Select an option from the chat above...';
+            score = 0;
+            setScore(0);
+            chatHistory.innerHTML = '';
+            appendMessage('bot', '☀️ **Game Mode Activated!** Get ready for Multiple Choice Questions.');
+            setTimeout(startGameRound, 1000);
+        } else {
