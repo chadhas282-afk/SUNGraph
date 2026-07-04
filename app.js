@@ -119,3 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = document.createElement('button');
             btn.className = 'mcq-btn';
             btn.innerText = opt;
+            btn.addEventListener('click', function() {
+                const allBtns = mcqContainer.querySelectorAll('button');
+                allBtns.forEach(b => {
+                    b.disabled = true;
+                    b.style.cursor = 'not-allowed';
+                    b.style.opacity = '0.45';
+                });
