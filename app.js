@@ -134,3 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.opacity = '1';
                     setScore(score + 10);
                 } else {
+                    btn.style.background = 'linear-gradient(135deg,rgba(69,10,10,0.9),rgba(60,5,5,0.9))';
+                    btn.style.borderColor = 'rgba(239,68,68,0.7)';
+                    btn.style.color = '#fca5a5';
+                    btn.style.opacity = '1';
+                    const correctStr = (type === 'name') ? currentShape.name : currentShape.latex;
+                    allBtns.forEach(b => {
