@@ -235,3 +235,12 @@ document.addEventListener('DOMContentLoaded', () => {
             labelGame.classList.add('label-inactive');
             scoreContainer.classList.add('hidden');
             chatInput.disabled = false;
+            chatInput.placeholder = 'Type an equation like y = sin(x)...';
+            chatHistory.innerHTML = '';
+            clearGraph();
+            appendMessage('bot', '📊 **Simple Mode Activated!** Type an equation like y = sin(x) and I will plot it.');
+        }
+    });
+
+    appendMessage('bot', '☀️ Welcome to **SUNGraph AI**! Type a mathematical equation like y = sin(x) and I will plot it. Toggle **Game Mode** to play the MCQ quiz!');
+});
