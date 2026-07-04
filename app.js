@@ -90,3 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
             callback();
         }, 800 + Math.random() * 500);
     }
+
+    function spawnFloatingScore() {
+        const floater = document.createElement('div');
+        floater.className = 'fixed font-black text-2xl floating-score select-none pointer-events-none z-50';
+        floater.innerText = '+10';
+        const rect = scoreContainer.getBoundingClientRect();
+        floater.style.left = (rect.left + rect.width / 2 - 14) + 'px';
