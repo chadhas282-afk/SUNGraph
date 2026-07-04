@@ -76,3 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         chatHistory.appendChild(msgDiv);
         chatHistory.scrollTop = chatHistory.scrollHeight;
     }
+
+     function showTypingIndicator(callback) {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chat-message self-start glass-bot rounded-2xl rounded-bl-sm px-5 py-3 max-w-[80%] typing-indicator';
+        typingDiv.id = 'typing-indicator';
+        typingDiv.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+        chatHistory.appendChild(typingDiv);
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+        setTimeout(() => {
