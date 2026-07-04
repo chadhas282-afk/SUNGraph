@@ -212,3 +212,12 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         handleUserInput(chatInput.value);
     });
+
+    modeToggle.addEventListener('change', (e) => {
+        isGameMode = e.target.checked;
+        if (isGameMode) {
+            labelSimple.classList.remove('label-active');
+            labelSimple.classList.add('label-inactive');
+            labelGame.classList.remove('label-inactive');
+            labelGame.classList.add('label-active');
+            scoreContainer.classList.remove('hidden');
