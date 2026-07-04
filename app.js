@@ -171,3 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return array;
     }
+
+    function startGameRound() {
+        if (!isGameMode) return;
+        clearGraph();
+
+        const shuffledShapes = shuffle([...shapes]);
+        const correctShape = shuffledShapes[0];
+        const wrongShapes = shuffledShapes.slice(1, 4);
