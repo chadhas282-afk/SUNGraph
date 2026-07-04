@@ -179,3 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const shuffledShapes = shuffle([...shapes]);
         const correctShape = shuffledShapes[0];
         const wrongShapes = shuffledShapes.slice(1, 4);
+
+        const typeIdx = Math.floor(Math.random() * 2);
+        
+        showTypingIndicator(() => {
+            if (typeIdx === 0) {
+                appendMessage('bot', `What is the shape of this equation: **${correctShape.latex}**?`);
+                let options = [correctShape.name, ...wrongShapes.map(s => s.name)];
+                appendMCQ(shuffle(options), correctShape, 'name');
+            } else {
