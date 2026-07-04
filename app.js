@@ -229,3 +229,9 @@ document.addEventListener('DOMContentLoaded', () => {
             appendMessage('bot', '☀️ **Game Mode Activated!** Get ready for Multiple Choice Questions.');
             setTimeout(startGameRound, 1000);
         } else {
+            labelSimple.classList.remove('label-inactive');
+            labelSimple.classList.add('label-active');
+            labelGame.classList.remove('label-active');
+            labelGame.classList.add('label-inactive');
+            scoreContainer.classList.add('hidden');
+            chatInput.disabled = false;
